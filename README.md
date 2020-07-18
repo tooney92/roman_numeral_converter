@@ -13,28 +13,27 @@ This program converts numbers to roman numerals. I noticed a commonality in the 
                                         
                                                     Formula:
                                                 Base | MIddle | Peak
-                                        units = I       V         M
+                                        units = I       V         X
                                         tens =  X       L         C
                                      hundreds = C       D         M
                                          
                                      each of these have a base, a middle and a peak
                                      
                                                 now the logic is this:
-                                     lets make number = n (i dont want to type number every time!                                            lazy? thats exactly why i learnt to code lol :) )
+                         lets make number = n (i dont want to type number every time!lazy? thats exactly why i learnt to code lol :) )
                                                  
-                                        if n < 5 and n is not equal to 4: this gives us numbers 1,2 or 9.
+                                        if n < 5 and n is not equal to 4: this gives us numbers 1,2 or 3.
                                               do ==>  n x base
                                         if n == 4:
                                               do ==> base + middle
-                                        if n > 5 and n < 9: this gives us numbers 6 or 7 or 9
+                                        if n > 5 and n < 9: this gives us numbers 6 or 7 or 8
                                               do ==> middle + base(n-5)
                                         if n == 9:
                                               do ==> base + peak
                                         if n == 5:
                                               do ==> middle
 
-             step one: get the length of the number. why? so we know if we are dealing with thousands,                hundreds, tens, or units. how do we get the length of an integer? simple, we convert it to a string then call the length method. 
-             
+             step one: get the length of the number. why? so we know if we are dealing with thousands,hundreds, tens, or units. how do we get the length of an integer? simple, we convert it to a string then call the length method. 
              
              step two: check the length and apply either of this cases. {thousands are the easiest, just multiply 'M' by the thousandth number}. 
         
@@ -56,7 +55,7 @@ This program converts numbers to roman numerals. I noticed a commonality in the 
                         b.) for 8 do ==> middle + base*(8-5) ==> VIII
                        the roman convertion for 78 = LXX-VIII
                        
-                    4.) when the length of the number is 2: {we will use 9 as test case} 
+                    4.) when the length of the number is 1: {we will use 9 as test case} 
                         a.) for 9 do ==> base + peak ==> IX
                         
                         
